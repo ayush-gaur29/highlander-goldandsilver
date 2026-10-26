@@ -265,7 +265,6 @@ function createCardMarkup(item) {
           alt="${escapeHtml(item.title)}" 
           class="card-img"
           loading="lazy"
-          onerror="this.onerror=null; this.src='/assets/brand/highlander_primary_logo.png';"
         />
       </div>
 

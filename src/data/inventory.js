@@ -24,7 +24,17 @@ export const BUSINESS_INFO = {
   }
 };
 
-export const INVENTORY_ITEMS = [
+// Vite asset bundler: bundles and hashes all item photographs with unique cache-busting URLs
+const itemImages = import.meta.glob('../../assets/items/*.jpg', { eager: true, import: 'default' });
+
+function resolveItemImage(path) {
+  if (!path) return '';
+  const filename = path.split('/').pop();
+  const key = `../../assets/items/${filename}`;
+  return itemImages[key] || path;
+}
+
+const RAW_INVENTORY_ITEMS = [
   {
     id: "item-001",
     lotNumber: "1",
@@ -249,6 +259,12 @@ export const INVENTORY_ITEMS = [
     status: "Available"
   }
 ];
+
+export const INVENTORY_ITEMS = RAW_INVENTORY_ITEMS.map(item => ({
+  ...item,
+  featuredImage: resolveItemImage(item.featuredImage),
+  additionalImages: (item.additionalImages || []).map(resolveItemImage)
+}));
 
 /**
  * Database abstraction helper methods (prepared for future Supabase client integration)

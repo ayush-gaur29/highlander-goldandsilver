@@ -76,7 +76,6 @@ function renderModalContent(container, item) {
             src="${images[0]}" 
             alt="${escapeHtml(item.title)}" 
             class="modal-main-img"
-            onerror="this.onerror=null; this.src='/assets/brand/highlander_primary_logo.png';"
           />
         </div>
 
