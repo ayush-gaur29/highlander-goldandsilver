@@ -1,0 +1,371 @@
+{
+  "apollo.state": {
+    "Auctioneer:149899": {
+      "__typename": "Auctioneer",
+      "address": "119 Jewel Basin Ct. Apt B3",
+      "bidIncrementDisclaimer": "Your bid must adhere to the<br/>bid increment schedule.",
+      "buyerRegNotesCaption": "YOUR NOTES TO THE AUCTIONEER",
+      "city": "Big Fork",
+      "countryId": 178,
+      "country": "United States",
+      "cRMID": 0,
+      "email": "stratford1955@icloud.com",
+      "fax": "",
+      "id": 149899,
+      "internetAddress": "highlandergoldandsilver.hibid.com/",
+      "missingThumbnail": "https://cdn.hibid.com/cdn/images/hibid/missing/thumbnail_en.png",
+      "name": "Highlander Gold and Silver",
+      "noMinimumCaption": "No Minimum",
+      "phone": "+1 (406) 407-0281",
+      "state": "MT",
+      "postalCode": "59911"
+    },
+    "Auction:754918": {
+      "__typename": "Auction",
+      "id": 754918,
+      "altBiddingUrl": null,
+      "altBiddingUrlCaption": "",
+      "amexAccepted": true,
+      "discoverAccepted": true,
+      "mastercardAccepted": true,
+      "visaAccepted": true,
+      "regType": "CREDIT_CARD_EVERY_TIME",
+      "holdAmount": 0,
+      "termsAndConditions": "HGS Terms & Conditions:\nBIDDING NOTICE:\nHGS has reverted over to an “on-line store” status, meaning that you will no longer be bidding against other bidders. While browsing, if a Bidder places a bid on an Item/Lot, a “Close” or “Check-out” can be triggered at your request. HGS will move to halt the on-line status to close the sale on the item/s you choose. Soon after the “Close”, the customer will receive a Settlement email. Within this email you can view/print/save your Settlement. At the lower portion of the same email page, you will see a PayPal Link (https://paypal.me/HighlanderGoldSilver) attached. Use this link to complete your traction.  Please note that some high-dollar items/lots require alternate payment methods.\nOnline - Internet Only – Open Store. All bidding/buying activity will take place online. Shipping is available on all items. Local pick-up optional but must be scheduled. \nHighlander Gold & Silver (HGS hereafter), requires payment within 24-hours of Settlement issuance, so please check your spam/junk folders to ensure you get our emails. Late payments, with no communications from the buyer, must be marked as a \"Non-Pay\", so those items can be returned to the Auction Store. Please be aware that a \"Non-Pay\" issued against a customer will damage their Bidder Score and diminish their ability to bid in these on-line auctions. If payment is not received within 12-hours, HGS will reach out offering to assist you. At present, and due to the escalating scammer activity within these on-line auctions, HGS will not perform “Auto-Runs” for payment. If not instructed otherwise, the Customers should use the “PayPal” Link which allows you to pay with any credit/debit card you wish. Other payment options are available. Once paid, please acknowledge your payment to HGS, replying to the Settlement eMail received. This is an additional effort that helps to protect your personal information, i.e.; acknowledgement that this is you performing the payment, not a scammer that stole your information. Direct phone communication may be required at times, so please ensure that your registration information is correct. HGS will not ship orders over $300 to a PO Box, unless prior arrangements have been made, and/or the customer is in good standing with HGS.\nOnce your payment clears HGS’s account, with no outstanding issues, your item/s are shipped via USPS Priority or Ground, fully insured. Please be aware that the USPS requires a \"signature\" for any insured package over $500. Prompt payments allow faster shipping. \nAdditional restrictions apply to all “New” Bidders to HGS Auctions, or Bidders with a low/negative Bidder Score;\n•Credit Card purchasing is acceptable for any Lot won via PayPal. Any Bid posted at or above your approved Bidder amount will be taken into consideration and quickly resolved during the auction.\n•All high-dollar Lots won, specifically gold coins & bullion whose Settlement value is beyond your approved bidder level will require a “Bank Wire Payment” method. HGS will provide a wire transfer credit on the Settlement Amount to assist in paying for your wire transfer fee, and more. See item’s description for additional “Wire Fee Credit” information. ACH & eCheck payments are not accepted unless arrangements are made prior to the start of each auction. Be advised that ACH & eCheck payment methods have a 14-day clearance requirement, due to the funds’ routing & clearance requirements, thereby shipping will be delayed. Note that HGS reserves the right to require a Wire Transfer Payment on any transaction deemed to be a “risk”. These restrictions do not apply to Bidders having a positive purchasing history with HGS.\n\nNumismatics: HGS presents hand-picked coins of high quality, regardless of the grading company’s MS value printed on each slab, and at a guaranteed “Sold Value”. If at any time a customer presents proof that the coin they purchased was over-priced, based on its current state, then HGS will refund the cost difference, or accept the return (as-sold) of the item’s purchased value (buyer pays return shipping).\n\nNotifications: HGS takes great effort to set the opening “Bid” at a value that allows a good deal for the bidder/purchaser. Once a coin is reviewed for its “more-true” elements of luster & detail, an opening bid is calculated, then HGS reduces that value to assist in paying for the Buyer’s Premium, and at least a portion of the shipping cost. In this manner, the customer gets a great deal with each purchase. Beautiful coins deserve consideration, regardless of the grading company someone decided to use long ago, so judge for yourself these beautiful coins.\nPrivate offers (below initial \"Bid\" value shown), can be sent to; \"Stratford1955@icloud.com\". \n\nHIGHLANDER GOLD & SILVER (aka; HGS)\nA Bidder's Bid, at all times, represents an irrevocable offer by the bidder to enter into a binding contract to purchase the lot/s in accordance with the specific provisions of the listing and these general terms and conditions, as applicable. In the event that any reserve price of a lot is not met or exceeded by any Bidder's bid, HGS, at its sole discretion, with or without the knowledge of or notice to any bidder, may reduce any reserve price to all a negotiated bid to be placed and accepted. Reserve prices are confidential information of HGS and are not always disclosed to bidders unless specifically stated as such during bidding. Nothing contained in any listing shall be construed to disclose any reserve price unless otherwise stated. In the placing of any bid, the bidder understands and agrees that the bid, once accepted by HGS, will be the winning bid if there is no higher bid by another bidder and if any reserve or reduced reserve on the lot is exceeded by the bid. All bids are binding, irrevocable, and non-cancelable by the Bidder. HGS has final discretion on the sale of a lot. All sales are \"as-is\" and final.  In the unlikely event that internet connection is lost, HGS reserves the right, at its sole and absolute discretion, to end the remainder of the auction and award the winning bids received.\n\nSales Tax: No Sales Tax will be levied for sales within this HGS Montana Site.\nSHIPPING & HANDLING\nDue to the current Customs & Tariff issues associated with precious metals, HGS will not ship to Canada, or Canadians unless they have an alternate U.S. address HGS can use. All U.S. shipping & handling is performed in-house by HGS. Local meet-up is optional if both parties agree. Shipping/Handling /Insurance Fees are generally shown within the initial Invoice received. Once payment has been received within the accounting system, those funds are not released to HGS for up to 24 hours minimum. Once payments are cleared, the shipment generally occurs within one business day. \n\nIMPORTANT NOTE; To prevent any degree of loss, by either party, all items are shipped fully insured, often with delivery confirmation or signature required. HGS will always strive to keep this cost to a minimum.\n\nTerms;\nBuyer's Premium is set at 15.0%\nBuyers must pre-qualify to bid using a valid credit/debit card. HGS will not perform auto-runs against your card. It is the Customer’s responsibility to use the PayPal Link and complete the transaction, paying with any card you choose. Any sale flagged as “risk”, may require a Wire Transfer, depending on the circumstances involved. Any disruption in the payment confirmation or close-out process will delay shipment.\n\nBy entering any HGS Auction, the Customer has agreed that no Dispute/s will be filed, and that all transactions are final. Bidder shall not dispute, challenge, issue a \"Chargeback\" or reverse any such payment or charge, without just cause. \n\nGoverning Law and Venue: This Agreement and the rights of the Parties shall be governed by and construed in accordance with the laws of the State of Montana, without the application of any conflict of law principles that would require or permit the application of the laws of any other jurisdiction. Any action at law or judicial proceeding instituted by any Party relating to this Agreement shall be instituted and maintained only in the state or federal courts in Flathead County, Montana.",
+      "auctioneer": {
+        "__ref": "Auctioneer:149899"
+      },
+      "auctionNotice": "HGS is a privately owned on-line precious metals store that closes per sale, or set of sales. HGS does not advertise to the masses, so we are not passing those high cost onto our customers. \n\nNOTIFICATION: HGS spends numerous hours each week to hand-pick coins of high quality, regardless of the grading company’s MS value printed on each slab. Please review the PCI (as an example) Graded Coins carefully, for although PCI (and others) are known for their inconsistencies in grading levels (often over-valuing in grade), HGS takes great efforts to set the opening “Bid” at a value that allows a great deal for the bidder/purchaser. Once a coin is reviewed for its “more-true” elements of luster & details, an opening bid/price is calculated that reduces that value to assist in paying for the Buyer Premium and at least a portion of the shipping. In this manner, the customer gets a great deal with each purchase. If you bid & win a PCI Graded Coin, you have HGS’s guarantee that the coin will be worth what you pay for it, often times far more. So review that PCI/other Graded coin with confidence that you are getting a good deal with a guarantee of the coin’s worth. If at any time a customer proves that the coin they purchased was over-priced, HGS will refund the difference. Beautiful coins deserve consideration, regardless of the grading company someone decided to use long ago, so judge for yourself these beautiful coins.\n\nNote that the HGS Bidder's Premium is 15% on all items listed. All shipping is performed in-house. All items shipped U.S.P.S. (UPS for larger oversized items), and are fully insured.\n\nPLEASE; If you don't want to pay for your won Item per our requirements, please DON'T BID! Non-Payers prevent other bidders/buyers from obtaining the item they wanted, and the issue will be reported within the on-line Bidder tracking system.",
+      "auctionOptions": {
+        "__typename": "AuctionOptionsType",
+        "bidding": true,
+        "altBidding": false,
+        "catalog": true,
+        "liveCatalog": true,
+        "shippingType": "SHIPPING_OFFERED_ALL",
+        "preview": false,
+        "registration": true,
+        "webcast": false,
+        "useLotNumber": true,
+        "useSaleOrder": true
+      },
+      "auctionState": {
+        "__typename": "AuctionStateType",
+        "auctionStatus": "ARCHIVED",
+        "bidCardNumber": 0,
+        "isRegistered": false,
+        "openLotCount": 0,
+        "timeToOpen": ""
+      },
+      "bidAmountType": "MAX_BIDDING",
+      "biddingNotice": "HGS has reverted over to an “on-line Store” status, meaning that you will no longer be bidding against other bidders, if/when you request to check-out.  While browsing, if a Bidder places a bid on an Item/Lot, a “Close” or “Check-out” can be triggered. Upon your request, HGS will move to halt the on-line active status to close the sale on the item/s you choose. Soon after the “Close”, the customer will receive a Settlement email. Within this email you can view/print/save your Settlement. At the lower portion of the same email page, you will see a PayPal Link (https://paypal.me/HighlanderGoldSilver) attached. Use this link to complete your traction. Please note that some high-dollar items/lots require alternate payment methods.\n\nPLEASE READ: Due to the increased credit card scammer/fraud activity within these on-line auction sites, HGS may require a Wire Transfer for payment. This requirement would not affect returning customers or Bidders having a positive (+) healthy Bidder's Score.  \n\nAs soon as the payments clear, with no outstanding issues, your item/s will ship. HGS strives to deliver great customer service, and we appreciate our good customers who pay promptly. Please review the full Terms & Conditions before bidding.",
+      "bidIncrements": [
+        {
+          "__typename": "BidIncrementType",
+          "minBidIncrement": 1,
+          "upToAmount": 30
+        },
+        {
+          "__typename": "BidIncrementType",
+          "minBidIncrement": 5,
+          "upToAmount": 200
+        },
+        {
+          "__typename": "BidIncrementType",
+          "minBidIncrement": 10,
+          "upToAmount": 1000
+        },
+        {
+          "__typename": "BidIncrementType",
+          "minBidIncrement": 50,
+          "upToAmount": 10000
+        },
+        {
+          "__typename": "BidIncrementType",
+          "minBidIncrement": 100,
+          "upToAmount": 100000
+        },
+        {
+          "__typename": "BidIncrementType",
+          "minBidIncrement": 250,
+          "upToAmount": 9999999.99
+        }
+      ],
+      "bidOpenDateTime": "2026-06-25T22:30:00",
+      "bidCloseDateTime": "2026-07-02T20:00:00",
+      "bidType": "INTERNET_ONLY",
+      "buyerPremium": "15% Buyer's Premium",
+      "buyerPremiumRate": 1,
+      "checkoutDateInfo": "07/03/26 or Per Sale Close",
+      "previewDateInfo": "06/25/26: Pre-Bidding Opens",
+      "currencyAbbreviation": "USD",
+      "description": "Welcome to HGS's on-line Store. A bid/offer will initiate a close/sale, at your request. No more waiting days for an auction close, if you choose. Other than a close/sale, HGS will remain on-line 24/7 so you can shop and checkout at your leisure.\n\nBuyer's Premium @ 15% on all items. Shipping on all Items. Tax Exempt on all purchases. Fast & Easy Self-Pay Checkout via PayPal. Zelle payments accepted.",
+      "eventAddress": "119 Jewel Basin Ct",
+      "eventCity": "Bigfork",
+      "eventDateBegin": "2026-06-25T00:00:00",
+      "eventDateEnd": "2026-07-02T00:00:00",
+      "eventDateInfo": "06/25/26 @ 08:30 PM thru 07/02/26 @ 06:00 PM",
+      "eventName": "Highlander Gold & Silver 07-02-26",
+      "eventState": "MT",
+      "eventZip": "59911",
+      "featuredPicture": {
+        "__typename": "Picture",
+        "description": "Highlander Gold & Silver 07-02-26",
+        "fullSizeLocation": "https://cdn.hibid.com/img.axd?id=8379243975&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=J7CuvmEJ9taPYM0yPpQMZtPxK%2fgb6vex",
+        "height": 0,
+        "hdThumbnailLocation": "",
+        "thumbnailLocation": "https://cdn.hibid.com/img.axd?id=8379243975&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=J7CuvmEJ9taPYM0yPpQMZtPxK%2fgb6vex&h=200&w=200",
+        "width": 0
+      },
+      "links": [],
+      "lotCount": 315,
+      "showBuyerPremium": false,
+      "audioVideoChatInfo": {
+        "__typename": "AuctionAudioVideoChat",
+        "aVCEnabled": false,
+        "blockChat": false
+      },
+      "shippingAndPickupInfo": "Shipping only! Local pick-up available, yet must be scheduled.",
+      "paymentInfo": "All winning bidders will receive a Settlement email initially, from HiBid/AF360. This is where you can download a copy of your Settlement. At the lower portion of the page you will see a PayPal Pay Link (https://paypal.me/HighlanderGoldSilver). Once you enter the PayPal area, enter the amount on your invoice, or an agreed upon value, to complete your transaction. Prompt payments allow fast shipping.",
+      "hidden": false,
+      "sourceType": "AF_360",
+      "distanceMiles": null
+    },
+    "CategoryTree:40139": {
+      "__typename": "CategoryTree",
+      "baseCategoryId": 40118,
+      "categoryName": "Gold",
+      "description": "If you’re searching for some of the most valuable bullion available, then the Gold Bullion category at HiBid.com is an excellent place to start. Here you’ll find gold round coins, bars, ingots, and notes from the United States and many foreign countries, such as Australia, Canada, and the United Kingdom. If you don’t see the item you’re looking for right now, check back again soon. Our website is continually updated, with new online gold auctions added on a regular basis.",
+      "fullCategory": "Coins & Currency - Bullion - Gold",
+      "header": null,
+      "id": 40139,
+      "parentCategoryId": 40138,
+      "uRLPath": "coins-and-currency/bullion/gold"
+    },
+    "CategoryTree:40138": {
+      "__typename": "CategoryTree",
+      "baseCategoryId": 40118,
+      "categoryName": "Bullion",
+      "description": "Whether you’re looking for bullion in bar, ingot, or round coin form, HiBid.com will have something for you. Our online auctions in this category feature valuable bullion items made from gold, silver, and platinum. Popular items you’re likely to encounter include silver eagles, silver buffalo rounds, and silver bars from the United States, as well as bullion from foreign countries such as Australia, Canada, China, and the United Kingdom. If you don’t see the exact item you’re looking for right now, check back again soon. Our website is continually updated, and new online bullion auctions are added often.",
+      "fullCategory": "Coins & Currency - Bullion",
+      "header": null,
+      "id": 40138,
+      "parentCategoryId": 40118,
+      "uRLPath": "coins-and-currency/bullion"
+    },
+    "CategoryTree:40118": {
+      "__typename": "CategoryTree",
+      "baseCategoryId": 40118,
+      "categoryName": "Coins & Currency",
+      "description": "Coin collecting has existed almost as long as coins themselves, and modern coin collectors regularly rely on online auctions to begin, expand, or complete their collections. HiBid.com is a leading source for coin auctions, with thousands of lots available for online bidding. You can find an extensive range of U.S. Coins at auction on our site, plus international and commemorative coins, paper money, and more. Collectors interested in rare tokens, medals, and other kinds of exonumia should also be able to find what they’re looking for here.",
+      "fullCategory": "Coins & Currency",
+      "header": null,
+      "id": 40118,
+      "parentCategoryId": 0,
+      "uRLPath": "coins-and-currency"
+    },
+    "Lot:309343212": {
+      "__typename": "Lot",
+      "auction": {
+        "__ref": "Auction:754918"
+      },
+      "bidAmount": 123.45,
+      "bidList": [
+        4250,
+        4300,
+        4350,
+        4400,
+        4450,
+        4500,
+        4550,
+        4600,
+        4650,
+        4700,
+        4750,
+        4800,
+        4850,
+        4900,
+        4950,
+        5000,
+        5050,
+        5100,
+        5150,
+        5200,
+        5250,
+        5300,
+        5350,
+        5400,
+        5450,
+        5500,
+        5550,
+        5600,
+        5650,
+        5700,
+        5750,
+        5800,
+        5850,
+        5900,
+        5950,
+        6000,
+        6050,
+        6100,
+        6150,
+        6200,
+        6250,
+        6300,
+        6350,
+        6400,
+        6450,
+        6500,
+        6550,
+        6600,
+        6650,
+        6700,
+        6750
+      ],
+      "bidQuantity": "",
+      "description": "1876 Private Issue George T. Morgan Ultra High Relief Gold Union .999 Pure Gold Ultra Cameo Gem Proof. Only 999 units minted, so this is truly a rare find.\nNote: This Item/Lot is a wire transfer payment only sale, no exceptions!",
+      "estimate": "4,250.00 - 5,700.00 USD",
+      "featuredPicture": {
+        "__typename": "Picture",
+        "description": "1876 Private Issue G.T. Morgan HR .999 UCGP",
+        "fullSizeLocation": "https://cdn.hibid.com/img.axd?id=7923811092&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKANodP90%2bAfkHPVIhhrSzjX",
+        "height": 0,
+        "hdThumbnailLocation": "https://cdn.hibid.com/img.axd?id=7923811092&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKANodP90%2bAfkHPVIhhrSzjX&h=400&w=400",
+        "thumbnailLocation": "https://cdn.hibid.com/img.axd?id=7923811092&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKANodP90%2bAfkHPVIhhrSzjX&h=350&w=350",
+        "width": 0
+      },
+      "forceLiveCatalog": false,
+      "hideLeadWithDescription": false,
+      "id": 309343212,
+      "itemId": 13776308,
+      "lead": "1876 Private Issue G.T. Morgan HR .999 UCGP",
+      "links": [],
+      "linkTypes": [],
+      "lotNavigator": null,
+      "lotNumber": "1",
+      "lotState": {
+        "__typename": "LotState",
+        "bidCount": 0,
+        "biddingExtended": false,
+        "bidMax": 0,
+        "bidMaxTotal": 0,
+        "buyerBidStatus": "NO_BID",
+        "buyerHighBid": 0,
+        "buyerHighBidTotal": 0,
+        "buyNow": 0,
+        "choiceType": "SINGLE_LOT",
+        "highBid": 0,
+        "highBuyerId": "",
+        "isArchived": true,
+        "isClosed": true,
+        "isHidden": false,
+        "isLive": false,
+        "isNotYetLive": false,
+        "isOnLiveCatalog": false,
+        "isPosted": false,
+        "isPublicHidden": false,
+        "isRegistered": false,
+        "isWatching": false,
+        "linkedSoftClose": "",
+        "mayHaveWonStatus": "",
+        "minBid": 0,
+        "priceRealized": 0,
+        "priceRealizedMessage": "Price Realized Not Uploaded",
+        "priceRealizedPerEach": 0,
+        "productStatus": "BUY_NOW_SET",
+        "productUrl": null,
+        "quantitySold": 0,
+        "reserveSatisfied": true,
+        "sealed": false,
+        "showBidStatus": false,
+        "showReserveStatus": false,
+        "softCloseMinutes": 0,
+        "softCloseSeconds": 0,
+        "status": "CLOSED",
+        "timeLeft": "",
+        "timeLeftLead": "",
+        "timeLeftSeconds": 0,
+        "timeLeftTitle": "",
+        "timeLeftWithLimboSeconds": 0,
+        "watchNotes": null
+      },
+      "pictureCount": 4,
+      "pictures": [
+        {
+          "__typename": "Picture",
+          "description": "1876 Private Issue G.T. Morgan HR .999 UCGP",
+          "fullSizeLocation": "https://cdn.hibid.com/img.axd?id=7923811092&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKANodP90%2bAfkHPVIhhrSzjX",
+          "height": 0,
+          "hdThumbnailLocation": "",
+          "thumbnailLocation": "https://cdn.hibid.com/img.axd?id=7923811092&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKANodP90%2bAfkHPVIhhrSzjX&h=200&w=200",
+          "width": 0
+        },
+        {
+          "__typename": "Picture",
+          "description": "1876 Private Issue G.T. Morgan HR .999 UCGP",
+          "fullSizeLocation": "https://cdn.hibid.com/img.axd?id=7923811090&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKDetfje%2f1vMW6AsGst6vGfV",
+          "height": 0,
+          "hdThumbnailLocation": "",
+          "thumbnailLocation": "https://cdn.hibid.com/img.axd?id=7923811090&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=txL93RL9nKDetfje%2f1vMW6AsGst6vGfV&h=200&w=200",
+          "width": 0
+        },
+        {
+          "__typename": "Picture",
+          "description": "1876 Private Issue G.T. Morgan HR .999 UCGP",
+          "fullSizeLocation": "https://cdn.hibid.com/img.axd?id=7923811105&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=A5gvNExWvK%2fEeuG4huC7VwpIzxPQ8iGg",
+          "height": 0,
+          "hdThumbnailLocation": "",
+          "thumbnailLocation": "https://cdn.hibid.com/img.axd?id=7923811105&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=A5gvNExWvK%2fEeuG4huC7VwpIzxPQ8iGg&h=200&w=200",
+          "width": 0
+        },
+        {
+          "__typename": "Picture",
+          "description": "1876 Private Issue G.T. Morgan HR .999 UCGP",
+          "fullSizeLocation": "https://cdn.hibid.com/img.axd?id=8083993783&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=KdEYF4ReYCF2Py2RE5pG5SkRb6h4N1WZ",
+          "height": 0,
+          "hdThumbnailLocation": "",
+          "thumbnailLocation": "https://cdn.hibid.com/img.axd?id=8083993783&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=KdEYF4ReYCF2Py2RE5pG5SkRb6h4N1WZ&h=200&w=200",
+          "width": 0
+        }
+      ],
+      "quantity": 1,
+      "ringNumber": 0,
+      "rv": 3,
+      "category": [
+        {
+          "__ref": "CategoryTree:40139"
+        },
+        {
+          "__ref": "CategoryTree:40138"
+        },
+        {
+          "__ref": "CategoryTree:40118"
+        }
+      ],
+      "shippingOffered": true,
+      "simulcastStatus": "PENDING",
+      "site": {
+        "__typename": "Site",
+        "domain": null,
+        "isDomainRequest": false,
+        "isExtraWWWRequest": false,
+        "siteType": "PUBLIC",
+        "subdomain": "WWW"
+      },
+      "saleOrder": 1
+    },
+    "ROOT_QUERY": {
+      "__typename": "Query",
+      "lot({\"countAsView\":true,\"input\":\"309343212\"})": {
+        "__typename": "LotAccessType",
+        "accessability": "ACCESSIBLE",
+        "lot": {
+          "__ref": "Lot:309343212"
+        }
+      }
+    }
+  },
+  "hb.startup-view-count": true,
+  "hb.server-render-reusable": true
+}

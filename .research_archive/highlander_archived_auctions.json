@@ -1,0 +1,25 @@
+{
+  "errors": [
+    {
+      "message": "Error trying to resolve field 'auctionSearch'.",
+      "locations": [
+        {
+          "line": 3,
+          "column": 7
+        }
+      ],
+      "path": [
+        "auctionSearch"
+      ],
+      "extensions": {
+        "code": "ARGUMENT_NULL",
+        "codes": [
+          "ARGUMENT_NULL"
+        ]
+      }
+    }
+  ],
+  "data": {
+    "auctionSearch": null
+  }
+}
