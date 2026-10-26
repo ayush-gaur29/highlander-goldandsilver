@@ -11,13 +11,16 @@ export function initNavbar() {
   const navLinks = document.querySelectorAll('.mobile-nav-link, .nav-link');
 
   // Sticky header scroll elevation
-  window.addEventListener('scroll', () => {
+  function updateHeaderScroll() {
     if (window.scrollY > 20) {
       header?.classList.add('scrolled');
     } else {
       header?.classList.remove('scrolled');
     }
-  }, { passive: true });
+  }
+
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
 
   // Mobile drawer controls
   function openDrawer() {
