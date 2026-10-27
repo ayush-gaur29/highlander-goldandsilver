@@ -16,10 +16,10 @@ export const INVENTORY_ITEMS: InventoryItem[] = [
     priceFormatted: "$4,850.00",
     estimateRange: "$4,250.00 – $5,700.00 USD",
     paymentNote: "High-value acquisition: Direct bank wire payment preferred with HGS wire credit applied on settlement.",
-    featuredImage: "/assets/items/lot1_morgan_gold_1.jpg",
+    featuredImage: "/assets/items/lot1_morgan_gold_gem.jpg",
     additionalImages: [
-      "/assets/items/lot1_morgan_gold_1.jpg",
-      "/assets/items/lot1_morgan_gold_2.jpg"
+      "/assets/items/lot1_morgan_gold_gem.jpg",
+      "/assets/items/lot1_morgan_gold_rev.jpg"
     ],
     isFeatured: true,
     status: "Available"
@@ -39,10 +39,10 @@ export const INVENTORY_ITEMS: InventoryItem[] = [
     priceFormatted: "$1,450.00",
     estimateRange: "$630.00 – $3,250.00 USD",
     paymentNote: "Direct checkout via PayPal. Orders processed and dispatched within 24 hours.",
-    featuredImage: "/assets/items/lot153_morgan_1897_1.jpg",
+    featuredImage: "/assets/items/lot153_morgan_1897_gem.jpg",
     additionalImages: [
-      "/assets/items/lot153_morgan_1897_1.jpg",
-      "/assets/items/lot153_morgan_1897_2.jpg"
+      "/assets/items/lot153_morgan_1897_gem.jpg",
+      "/assets/items/lot153_morgan_1897_rev.jpg"
     ],
     isFeatured: true,
     status: "Available"
@@ -62,10 +62,10 @@ export const INVENTORY_ITEMS: InventoryItem[] = [
     priceFormatted: "$340.00",
     estimateRange: "$280.00 – $375.00 USD",
     paymentNote: "Direct checkout eligible via PayPal. USPS Priority Insured Shipping.",
-    featuredImage: "/assets/items/lot9_pilgrim_1921_1.jpg",
+    featuredImage: "/assets/items/lot9_pilgrim_1921_gem.jpg",
     additionalImages: [
-      "/assets/items/lot9_pilgrim_1921_1.jpg",
-      "/assets/items/lot9_pilgrim_1921_2.jpg"
+      "/assets/items/lot9_pilgrim_1921_gem.jpg",
+      "/assets/items/lot9_pilgrim_1921_rev.jpg"
     ],
     isFeatured: true,
     status: "Available"
@@ -85,9 +85,9 @@ export const INVENTORY_ITEMS: InventoryItem[] = [
     priceFormatted: "$285.00",
     estimateRange: "$260.00 – $340.00 USD",
     paymentNote: "Direct checkout via PayPal with instant settlement confirmation.",
-    featuredImage: "/assets/items/lot203_peace_dollar_2023_pr70.jpg",
+    featuredImage: "/assets/items/lot203_peace_dollar_gem.jpg",
     additionalImages: [
-      "/assets/items/lot203_peace_dollar_2023_pr70.jpg"
+      "/assets/items/lot203_peace_dollar_gem.jpg"
     ],
     isFeatured: true,
     status: "Available"
@@ -218,9 +218,9 @@ export const INVENTORY_ITEMS: InventoryItem[] = [
     priceFormatted: "$275.00",
     estimateRange: "$220.00 – $310.00 USD",
     paymentNote: "Direct checkout via PayPal or Zelle with immediate confirmation.",
-    featuredImage: "/assets/items/lot153_morgan_1897_1.jpg",
+    featuredImage: "/assets/items/lot62_morgan_1883_gem.jpg",
     additionalImages: [
-      "/assets/items/lot153_morgan_1897_1.jpg"
+      "/assets/items/lot62_morgan_1883_gem.jpg"
     ],
     isFeatured: false,
     status: "Available"

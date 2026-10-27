@@ -13,7 +13,7 @@ export const PAST_AUCTIONS: PastAuctionItem[] = [
     realizedPrice: 1450.00,
     realizedPriceFormatted: "$1,450.00",
     statusText: "Closed / Realized",
-    image: "/assets/items/lot153_morgan_1897_1.jpg"
+    image: "/assets/items/lot153_morgan_1897_gem.jpg"
   },
   {
     id: "past-009",
@@ -27,7 +27,7 @@ export const PAST_AUCTIONS: PastAuctionItem[] = [
     realizedPrice: 340.00,
     realizedPriceFormatted: "$340.00",
     statusText: "Closed / Realized",
-    image: "/assets/items/lot9_pilgrim_1921_1.jpg"
+    image: "/assets/items/lot9_pilgrim_1921_gem.jpg"
   },
   {
     id: "past-203",
@@ -41,7 +41,7 @@ export const PAST_AUCTIONS: PastAuctionItem[] = [
     realizedPrice: 425.00,
     realizedPriceFormatted: "$425.00",
     statusText: "Closed / Realized",
-    image: "/assets/items/lot203_peace_dollar_2023_pr70.jpg"
+    image: "/assets/items/lot203_peace_dollar_gem.jpg"
   },
   {
     id: "past-170",
