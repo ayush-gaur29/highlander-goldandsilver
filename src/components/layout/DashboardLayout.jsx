@@ -8,8 +8,8 @@ export const DashboardLayout = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-warm-body text-slate-800 flex">
-      {/* Left fixed / responsive dark navy sidebar */}
+    <div className="min-h-screen bg-white text-[#111827] flex font-sans">
+      {/* Left fixed / responsive light ice-blue sidebar */}
       <Sidebar
         isCollapsed={isCollapsed}
         setIsCollapsed={setIsCollapsed}
@@ -27,11 +27,10 @@ export const DashboardLayout = () => {
         <Header onMobileMenuClick={() => setIsMobileOpen(true)} />
 
         {/* Dynamic page content routed by React Router DOM */}
-        <main className="flex-1 p-4 sm:p-6 w-full">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto bg-white">
           <Outlet />
         </main>
       </div>
     </div>
   );
 };
-

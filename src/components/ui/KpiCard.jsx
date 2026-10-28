@@ -13,34 +13,36 @@ export const KpiCard = ({
   onClick,
   className = ''
 }) => {
+  const isGreenBadge = badgeText === 'Available' || badgeText === 'All Settled';
+
   return (
     <div
       onClick={onClick}
-      className={`relative bg-white rounded-xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-200 ${
-        onClick ? 'cursor-pointer hover:border-gold/50' : ''
+      className={`relative bg-white rounded-2xl p-5 border border-slate-200/90 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-md transition-all duration-200 flex flex-col justify-between min-h-[145px] ${
+        onClick ? 'cursor-pointer hover:border-[#F5B52E]/60' : ''
       } ${className}`}
     >
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{title}</p>
-          <h3 className="mt-2 text-2xl font-bold text-slate-900 font-sans tracking-tight">
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{title}</p>
+          <h3 className="mt-2 text-2xl sm:text-[28px] font-bold text-slate-900 font-sans tracking-tight leading-none">
             {isCurrency && typeof value === 'number'
               ? `$${value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
               : value}
           </h3>
         </div>
         {Icon && (
-          <div className="w-11 h-11 rounded-xl bg-aubergine-surface flex items-center justify-center text-aubergine shrink-0 border border-aubergine-border">
-            <Icon className="w-5 h-5 text-aubergine" />
+          <div className="w-8 h-8 rounded-xl bg-slate-50/80 flex items-center justify-center text-slate-400 shrink-0 border border-slate-200/70">
+            <Icon className="w-4 h-4 text-slate-400" />
           </div>
         )}
       </div>
 
-      <div className="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-100">
+      <div className="mt-3 flex items-center justify-between text-xs pt-2">
         <div className="flex items-center gap-1.5">
           {trend && (
             <span
-              className={`inline-flex items-center font-semibold gap-0.5 ${
+              className={`inline-flex items-center font-bold text-xs gap-0.5 ${
                 trendPositive ? 'text-emerald-600' : 'text-rose-600'
               }`}
             >
@@ -48,11 +50,15 @@ export const KpiCard = ({
               {trend}
             </span>
           )}
-          {subtitle && <span className="text-slate-500">{subtitle}</span>}
+          {subtitle && <span className="text-slate-400 text-xs font-sans">{subtitle}</span>}
         </div>
 
         {badgeText && (
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-gold-surface text-gold-dark border border-gold-border">
+          <span className={`px-2.5 py-0.5 rounded-md text-[10px] font-semibold border ${
+            isGreenBadge
+              ? 'bg-[#ECFDF5] text-emerald-700 border-emerald-200/90'
+              : 'bg-[#FFF9ED] text-[#C9A23A] border border-[#FBE3B5]'
+          }`}>
             {badgeText}
           </span>
         )}
@@ -60,4 +66,3 @@ export const KpiCard = ({
     </div>
   );
 };
-

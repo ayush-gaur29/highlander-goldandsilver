@@ -4,68 +4,64 @@
 
 @layer base {
   :root {
-    --color-primary-navy: #0B2348;
-    --color-deep-navy: #071A35;
-    --color-luxury-gold: #C9A23A;
-    --color-gold-hover: #B58D27;
-    --color-warm-ivory: #F8F6F1;
-    --color-pure-white: #FFFFFF;
-    --color-powder-blue: #E8F0F8;
-    --color-border: #E4E0D8;
-    --color-primary-text: #0B2348;
-    --color-secondary-text: #6F6C67;
+    --color-primary-navy: #111827;
+    --color-secondary-text: #64748B;
+    --color-main-bg: #F5F8FC;
+    --color-card-bg: #FFFFFF;
+    --color-card-border: #DCE5F0;
+    --color-luxury-gold: #D6AD45;
+    --color-gold-hover: #BF952E;
+    --color-sidebar-from: #5B82A6;
+    --color-sidebar-via: #497094;
+    --color-sidebar-to: #355C80;
+    --color-success: #10B981;
+    --color-error: #EF4444;
   }
 
   body {
-    background-color: #F8F6F1;
-    color: #0B2348;
+    background-color: #F5F8FC;
+    color: #111827;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
-/* Custom Luxury Scrollbars */
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F6F1;
+  background: #F5F8FC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4CFC6;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A23A;
+  background: #94A3B8;
 }
 
 /* Glassmorphism UI Effects - Highlander Premium Design */
 .glass-surface {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(201, 162, 58, 0.16);
-  box-shadow: 0 4px 18px rgba(11, 35, 72, 0.05);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #DCE5F0;
+  box-shadow: 0 4px 18px rgba(17, 24, 39, 0.04);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-header {
-  background: rgba(248, 246, 241, 0.88);
-  border-bottom: 1px solid rgba(201, 162, 58, 0.18);
+  background: rgba(245, 248, 252, 0.92);
+  border-bottom: 1px solid #DCE5F0;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-overlay {
-  background: rgba(7, 26, 53, 0.55);
+  background: rgba(17, 24, 39, 0.5);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-}
-
-.glass-nav-active {
-  background: rgba(201, 162, 58, 0.12);
-  border: 1px solid rgba(201, 162, 58, 0.35);
-  box-shadow: 0 2px 8px rgba(201, 162, 58, 0.12);
 }

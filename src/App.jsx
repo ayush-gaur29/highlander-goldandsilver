@@ -1,11 +1,15 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastProvider } from './context/ToastContext';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import { SpotPriceProvider } from './context/SpotPriceContext';
 import { DashboardLayout } from './components/layout/DashboardLayout';
 
-// Lazy-loaded pages for high performance & minimal initial payload
+// Lazy-loaded auth pages
+const Login = lazy(() => import('./pages/Login').then(m => ({ default: m.Login })));
+const SignUp = lazy(() => import('./pages/SignUp').then(m => ({ default: m.SignUp })));
+
+// Lazy-loaded admin pages for high performance & minimal initial payload
 const Dashboard = lazy(() => import('./pages/Dashboard').then(m => ({ default: m.Dashboard })));
 const Inventory = lazy(() => import('./pages/Inventory').then(m => ({ default: m.Inventory })));
 const Categories = lazy(() => import('./pages/Categories').then(m => ({ default: m.Categories })));
@@ -30,6 +34,15 @@ const PageLoader = () => (
   </div>
 );
 
+// Protected route guard for console administration
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useAuth();
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+  return children;
+};
+
 export const App = () => {
   return (
     <BrowserRouter>
@@ -38,8 +51,19 @@ export const App = () => {
           <SpotPriceProvider>
             <Suspense fallback={<PageLoader />}>
               <Routes>
-                {/* Primary Admin Console Layout: Sidebar on Left, Content in Right-side Outlet */}
-                <Route path="/" element={<DashboardLayout />}>
+                {/* Public Authentication Screens */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+
+                {/* Primary Admin Console Layout: Protected Session Required */}
+                <Route
+                  path="/"
+                  element={
+                    <ProtectedRoute>
+                      <DashboardLayout />
+                    </ProtectedRoute>
+                  }
+                >
                   <Route index element={<Dashboard />} />
                   <Route path="products" element={<Inventory />} />
                   <Route path="inventory" element={<Inventory />} />

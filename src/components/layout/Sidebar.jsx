@@ -1,15 +1,13 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 import { 
   LayoutDashboard, 
   Coins, 
   Layers, 
   ShoppingBag, 
   CreditCard,
-  Tag,
   Users,
   MessageSquareQuote, 
-  ShieldCheck,
   Settings,
   ChevronLeft, 
   ChevronRight,
@@ -30,7 +28,7 @@ export const Sidebar = ({
 
   const navGroups = [
     {
-      group: 'Storefront Management',
+      group: 'STOREFRONT MANAGEMENT',
       items: [
         {
           to: '/',
@@ -59,32 +57,20 @@ export const Sidebar = ({
         },
         {
           to: '/inquiries',
-          label: 'Inquiries & Buyback',
+          label: 'Inquiries & Buyb...',
           icon: MessageSquareQuote,
           badge: inquiriesCount > 0 ? `${inquiriesCount} new` : null,
-          badgeColor: 'bg-[#C9A23A] text-[#071A35]'
+          badgeColor: 'bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]'
         }
       ]
     },
     {
-      group: 'Administration',
+      group: 'ADMINISTRATION',
       items: [
         {
           to: '/customers',
           label: 'Users',
           icon: Users,
-          badge: null
-        },
-        {
-          to: '/admin-users',
-          label: 'Admin Users',
-          icon: ShieldCheck,
-          badge: 'Staff'
-        },
-        {
-          to: '/coupons',
-          label: 'Coupons',
-          icon: Tag,
           badge: null
         },
         {
@@ -96,7 +82,7 @@ export const Sidebar = ({
       ]
     },
     {
-      group: 'System',
+      group: 'SYSTEM',
       items: [
         {
           to: '/settings',
@@ -113,54 +99,55 @@ export const Sidebar = ({
       {/* Mobile Backdrop Overlay */}
       {isMobileOpen && (
         <div
-          className="fixed inset-0 z-40 bg-[#040F20]/80 backdrop-blur-sm lg:hidden transition-opacity"
+          className="fixed inset-0 z-40 bg-slate-900/40 backdrop-blur-xs lg:hidden transition-opacity"
           onClick={() => setIsMobileOpen(false)}
         />
       )}
 
-      {/* Sidebar Aside */}
+      {/* Sidebar Aside - Light Ice-Blue to Pearl Gradient */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-[#071A35] text-slate-200 border-r border-[#C9A23A]/20 transition-all duration-300 ease-in-out shadow-2xl ${
+        className={`fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-gradient-to-b from-[#ECF7FF] via-[#EEF7FD] to-[#F2F9FD] text-slate-800 border-r border-[#D9EAF7] transition-all duration-300 ease-in-out shadow-sm ${
           isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         } ${
           isCollapsed ? 'lg:w-20' : 'lg:w-64 w-72'
         }`}
       >
-        {/* Brand Header with generous top margin & proper logo alignment */}
-        <div className="pt-6 pb-5 px-4 flex items-center justify-between border-b border-[#C9A23A]/15 bg-[#071A35]">
-          <div className="flex items-center gap-3 overflow-hidden">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#C9A23A]/25 via-[#0B2348] to-[#C9A23A]/10 p-1.5 border border-[#C9A23A]/40 shadow-sm shrink-0 flex items-center justify-center">
+        {/* Brand Header */}
+        <div className="pt-6 pb-5 px-4 flex flex-col items-center justify-center border-b border-[#DCEBF7]/80 bg-white/40 relative">
+          <Link to="/" className="flex flex-col items-center text-center group">
+            {/* Amber/Gold Bordered Box with Mountain Crest */}
+            <div className="w-12 h-12 rounded-2xl bg-[#FFF9ED] p-2 border border-[#FBE3B5] shadow-xs flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <img
-                src="https://highlander-goldandsilver.vercel.app/assets/brand/highlander_crest_favicon.png"
-                alt="Highlander Gold & Silver Crest"
-                className="w-full h-full object-contain filter drop-shadow-sm"
+                src="/assets/brand/highlander_crest_favicon.png"
+                alt="Highlander Gold & Silver"
+                className="w-full h-full object-contain filter drop-shadow-xs"
                 onError={(e) => {
-                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.src = "https://highlander-goldandsilver.vercel.app/assets/brand/highlander_crest_favicon.png";
                 }}
               />
             </div>
 
             {!isCollapsed && (
-              <div className="flex flex-col min-w-0 justify-center">
-                <div className="flex items-center gap-1.5">
-                  <span className="font-serif font-bold text-sm tracking-wider text-white">
-                    HIGHLANDER
-                  </span>
-                  <span className="text-[#C9A23A] font-serif font-semibold text-[10px] px-1.5 py-0.5 rounded bg-[#C9A23A]/15 border border-[#C9A23A]/30 leading-none">
-                    G&S
-                  </span>
-                </div>
-                <span className="text-[10px] text-slate-400 uppercase tracking-widest font-mono mt-1 truncate">
-                  Admin Console • Bigfork
+              <div className="flex flex-col items-center mt-2.5">
+                <span className="font-serif font-bold text-sm tracking-[0.2em] text-[#0F1E32] leading-tight">
+                  HIGHLANDER
                 </span>
+                <span className="font-serif text-[#C9A23A] font-semibold text-[10px] tracking-[0.22em] uppercase mt-0.5">
+                  GOLD & SILVER
+                </span>
+
+                <div className="mt-2.5 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/90 border border-slate-200/90 text-[9px] font-bold text-slate-600 tracking-wider shadow-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E5A93C] shrink-0" />
+                  <span>ADMIN CONSOLE • BIGFORK</span>
+                </div>
               </div>
             )}
-          </div>
+          </Link>
 
           {/* Mobile close button */}
           <button
             onClick={() => setIsMobileOpen(false)}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-[#0B2348] lg:hidden"
+            className="absolute top-4 right-3 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-white/60 lg:hidden cursor-pointer"
             aria-label="Close sidebar"
           >
             <X className="w-5 h-5" />
@@ -172,7 +159,7 @@ export const Sidebar = ({
           {navGroups.map((group, groupIdx) => (
             <div key={group.group || groupIdx} className="space-y-1">
               {!isCollapsed && (
-                <div className="px-3 mb-1.5 text-[10px] font-bold uppercase tracking-wider text-[#C9A23A]/85 font-serif">
+                <div className="px-3 mb-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 font-sans">
                   {group.group}
                 </div>
               )}
@@ -191,14 +178,14 @@ export const Sidebar = ({
                     className={() =>
                       `flex items-center gap-3 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all group relative ${
                         isCurrentActive
-                          ? 'bg-[#0B2348] text-white font-semibold shadow-sm border border-[#C9A23A]/40'
-                          : 'text-slate-300 hover:bg-[#0B2348]/60 hover:text-white border border-transparent'
+                          ? 'bg-[#FFFDF7] text-slate-900 font-semibold shadow-xs border border-[#F5B52E]/70'
+                          : 'text-slate-600 hover:bg-white/70 hover:text-slate-900 border border-transparent'
                       }`
                     }
                   >
                     <Icon
                       className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 transition-colors ${
-                        isCurrentActive ? 'text-[#C9A23A]' : 'text-slate-400 group-hover:text-[#DEBC5E]'
+                        isCurrentActive ? 'text-[#D4AF37]' : 'text-slate-400 group-hover:text-slate-600'
                       }`}
                     />
 
@@ -206,10 +193,14 @@ export const Sidebar = ({
                       <span className="flex-1 truncate tracking-tight">{item.label}</span>
                     )}
 
-                    {!isCollapsed && item.badge && (
+                    {!isCollapsed && isCurrentActive && (
+                      <span className="w-2 h-2 rounded-full bg-[#F5B52E] shrink-0 ml-auto shadow-xs" />
+                    )}
+
+                    {!isCollapsed && !isCurrentActive && item.badge && (
                       <span
                         className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
-                          item.badgeColor || 'bg-[#071A35] text-[#C9A23A] border border-[#C9A23A]/30'
+                          item.badgeColor || 'bg-white text-slate-700 border border-slate-200 shadow-xs'
                         }`}
                       >
                         {item.badge}
@@ -228,32 +219,35 @@ export const Sidebar = ({
               target="_blank"
               rel="noopener noreferrer"
               title="View Public Storefront"
-              className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-300 hover:bg-[#0B2348]/60 hover:text-[#C9A23A] transition-colors border border-transparent"
+              className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:bg-white/70 hover:text-slate-900 transition-colors border border-transparent"
             >
-              <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-[#C9A23A]" />
+              <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-slate-400" />
               {!isCollapsed && <span className="flex-1 truncate tracking-tight">View Public Storefront</span>}
             </a>
           </div>
         </div>
 
-        {/* Admin User Footer / Desktop Collapse Toggle with Glassmorphism Accent */}
-        <div className="p-3 border-t border-[#C9A23A]/20 bg-[#071A35]/95 flex items-center justify-between">
+        {/* Admin User Footer */}
+        <div className="p-3.5 border-t border-[#DCEBF7]/80 bg-white/40 flex items-center justify-between">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="w-8 h-8 rounded-full bg-[#C9A23A]/20 border border-[#C9A23A]/40 flex items-center justify-center text-[#C9A23A] font-bold text-xs shrink-0 font-serif">
+            <div className="w-8 h-8 rounded-full bg-[#FFF9ED] border border-[#FBE3B5] flex items-center justify-center text-[#C9A23A] font-bold text-xs shrink-0 font-serif shadow-xs">
               AM
             </div>
             {!isCollapsed && (
               <div className="flex flex-col truncate">
-                <span className="text-xs font-semibold text-white truncate">{adminUser?.name || 'Alexander MacLeod'}</span>
-                <span className="text-[10px] text-slate-400 truncate">{adminUser?.role || 'Vault Director'}</span>
+                <span className="text-xs font-bold text-slate-800 truncate font-serif">
+                  {adminUser?.name || 'Alexander MacLeod'}
+                </span>
+                <span className="text-[10px] text-slate-400 truncate font-sans">
+                  {adminUser?.role || 'Senior Numismatist & Vault Director'}
+                </span>
               </div>
             )}
           </div>
 
-          {/* Desktop sidebar collapse toggle */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="hidden lg:flex p-1.5 text-slate-400 hover:text-white hover:bg-[#0B2348] rounded-lg transition-colors"
+            className="hidden lg:flex p-1.5 text-slate-400 hover:text-slate-700 hover:bg-white/60 rounded-lg transition-colors cursor-pointer"
             title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             aria-label="Toggle sidebar width"
           >

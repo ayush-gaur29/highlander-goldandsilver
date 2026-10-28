@@ -18,6 +18,9 @@ export const CustomerFormModal = ({
     full_name: '',
     email: '',
     phone: '',
+    role: 'Customer', // 'Customer' | 'Admin'
+    admin_role: 'Super Admin',
+    title: 'Administrative Staff',
     city: 'Bigfork',
     state: 'MT',
     interest: 'Morgan Dollars & Bullion',
@@ -32,17 +35,21 @@ export const CustomerFormModal = ({
 
   useEffect(() => {
     if (initialData) {
+      const isAdm = initialData.is_admin || initialData.role === 'Admin' || initialData.admin_role;
       setFormData({
-        customer_id: initialData.customer_id || `CUST-${initialData.id?.slice(-4).toUpperCase() || '1000'}`,
-        full_name: initialData.full_name || '',
+        customer_id: initialData.customer_id || (isAdm ? `STAFF-${initialData.id?.replace('adm-', '00') || '001'}` : `CUST-${initialData.id?.slice(-4).toUpperCase() || '1000'}`),
+        full_name: initialData.full_name || initialData.name || '',
         email: initialData.email || '',
         phone: initialData.phone || '',
-        city: initialData.city || '',
+        role: isAdm ? 'Admin' : 'Customer',
+        admin_role: initialData.admin_role || initialData.role || 'Super Admin',
+        title: initialData.title || (isAdm ? 'Senior Numismatist & Vault Director' : ''),
+        city: initialData.city || (initialData.location ? initialData.location.split(' ')[0] : 'Bigfork'),
         state: initialData.state || 'MT',
         interest: initialData.interest || '',
         total_spent: initialData.total_spent || 0,
         orders_count: initialData.orders_count || 0,
-        account_status: initialData.account_status || 'Active',
+        account_status: initialData.account_status || initialData.status || 'Active',
         tier: initialData.tier || 'Collector',
         notes: initialData.notes || '',
       });
@@ -53,6 +60,9 @@ export const CustomerFormModal = ({
         full_name: '',
         email: '',
         phone: '',
+        role: 'Customer',
+        admin_role: 'Super Admin',
+        title: 'Senior Numismatist',
         city: 'Bigfork',
         state: 'MT',
         interest: 'Gold & Rare Morgan Dollars',
@@ -88,23 +98,44 @@ export const CustomerFormModal = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={isEditing ? `Edit Customer: ${formData.full_name}` : 'Register Storefront Customer / User'}
-      subtitle="Highlander Gold & Silver Customer Directory"
+      title={isEditing ? `Edit User: ${formData.full_name}` : 'Register New User'}
+      subtitle="Highlander Gold & Silver Accounts & Directory"
       maxWidth="max-w-lg"
     >
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div>
             <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
-              Customer ID *
+              User ID *
             </label>
             <input
               type="text"
               value={formData.customer_id}
               onChange={(e) => setFormData({ ...formData, customer_id: e.target.value })}
-              placeholder="e.g. CUST-1001"
+              placeholder={formData.role === 'Admin' ? 'e.g. STAFF-001' : 'e.g. CUST-1001'}
               className="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-slate-50 font-mono focus:outline-none"
             />
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+              Account Role *
+            </label>
+            <select
+              value={formData.role}
+              onChange={(e) => {
+                const newRole = e.target.value;
+                setFormData(prev => ({
+                  ...prev,
+                  role: newRole,
+                  customer_id: newRole === 'Admin' ? `STAFF-${Math.floor(100 + Math.random() * 900)}` : `CUST-${Math.floor(1000 + Math.random() * 9000)}`
+                }));
+              }}
+              className="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white font-medium focus:outline-none"
+            >
+              <option value="Customer">Customer (User)</option>
+              <option value="Admin">Admin (Staff)</option>
+            </select>
           </div>
 
           <div>
@@ -125,19 +156,51 @@ export const CustomerFormModal = ({
 
         <div>
           <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
-            Customer Name *
+            Full Name *
           </label>
           <input
             type="text"
             value={formData.full_name}
             onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
-            placeholder="e.g. William Sterling"
+            placeholder={formData.role === 'Admin' ? 'e.g. Alexander MacLeod' : 'e.g. William Sterling'}
             className={`w-full px-3 py-2 text-sm rounded-lg border ${
               errors.full_name ? 'border-rose-400 bg-rose-50' : 'border-slate-200 bg-white'
             } focus:ring-2 focus:ring-aubergine-muted focus:outline-none`}
           />
           {errors.full_name && <p className="text-[11px] text-rose-500 mt-1">{errors.full_name}</p>}
         </div>
+
+        {formData.role === 'Admin' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 bg-purple-50/60 border border-purple-200/60 rounded-xl">
+            <div>
+              <label className="block text-xs font-semibold text-purple-900 uppercase tracking-wider mb-1">
+                Admin Staff Role
+              </label>
+              <select
+                value={formData.admin_role}
+                onChange={(e) => setFormData({ ...formData, admin_role: e.target.value })}
+                className="w-full px-3 py-2 text-sm rounded-lg border border-purple-200 bg-white text-slate-800 focus:outline-none"
+              >
+                <option value="Super Admin">Super Admin</option>
+                <option value="Inventory Manager">Inventory Manager</option>
+                <option value="Order Manager">Order Manager</option>
+                <option value="Vault Staff">Vault Staff</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-xs font-semibold text-purple-900 uppercase tracking-wider mb-1">
+                Department / Title
+              </label>
+              <input
+                type="text"
+                value={formData.title}
+                onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                placeholder="e.g. Senior Numismatist & Vault Director"
+                className="w-full px-3 py-2 text-sm rounded-lg border border-purple-200 bg-white text-slate-800 focus:outline-none"
+              />
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
@@ -230,7 +293,7 @@ export const CustomerFormModal = ({
             ) : (
               <Check className="w-4 h-4 text-gold" />
             )}
-            {isEditing ? 'Save Changes' : 'Register Customer'}
+            {isEditing ? 'Save Changes' : (formData.role === 'Admin' ? 'Register Admin User' : 'Register Customer')}
           </button>
         </div>
       </form>

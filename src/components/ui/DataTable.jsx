@@ -43,9 +43,9 @@ export const DataTable = ({
   const [openActionId, setOpenActionId] = useState(null);
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200/80 shadow-card overflow-hidden">
+    <div className="bg-white rounded-2xl border border-[#DCE5F0] shadow-xs overflow-hidden">
       {/* Table Toolbar */}
-      <div className="p-4 border-b border-slate-100 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 bg-white">
+      <div className="p-4 border-b border-[#DCE5F0] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 bg-white">
         <div className="flex-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           {onSearchChange && (
             <SearchInput
@@ -79,9 +79,9 @@ export const DataTable = ({
 
       {/* Main Table Responsive Container */}
       <div className="overflow-x-auto min-h-[300px]">
-        <table className="w-full text-left text-sm text-slate-600 border-collapse">
+        <table className="w-full text-left text-sm text-[#64748B] border-collapse">
           {/* Table Header */}
-          <thead className="bg-slate-50/80 text-xs text-slate-500 uppercase font-semibold border-b border-slate-200">
+          <thead className="bg-[#F5F8FC] text-xs text-[#64748B] uppercase font-semibold border-b border-[#DCE5F0]">
             <tr>
               {columns.map((col) => {
                 const isSortable = col.sortable !== false && onSort && col.accessor;
@@ -91,19 +91,19 @@ export const DataTable = ({
                   <th
                     key={col.key || col.accessor || col.header}
                     className={`px-4 py-3.5 ${col.className || ''} ${
-                      isSortable ? 'cursor-pointer select-none hover:bg-slate-100/80 transition-colors' : ''
+                      isSortable ? 'cursor-pointer select-none hover:bg-[#EAEFF7] transition-colors' : ''
                     }`}
                     onClick={() => isSortable && onSort(col.accessor)}
                   >
                     <div className="flex items-center gap-1.5">
                       <span>{col.header}</span>
                       {isSortable && (
-                        <span className="text-slate-400">
+                        <span className="text-[#64748B]">
                           {isCurrentSort ? (
                             sortAsc ? (
-                              <ArrowUp className="w-3.5 h-3.5 text-aubergine font-bold" />
+                              <ArrowUp className="w-3.5 h-3.5 text-[#111827] font-bold" />
                             ) : (
-                              <ArrowDown className="w-3.5 h-3.5 text-aubergine font-bold" />
+                              <ArrowDown className="w-3.5 h-3.5 text-[#111827] font-bold" />
                             )
                           ) : (
                             <ArrowUpDown className="w-3 h-3 opacity-40 hover:opacity-100" />
@@ -115,7 +115,7 @@ export const DataTable = ({
                 );
               })}
               {(onView || onEdit || onDelete) && (
-                <th className="px-4 py-3.5 text-right w-16 uppercase text-slate-500 font-semibold text-xs tracking-wider">
+                <th className="px-4 py-3.5 text-right w-16 uppercase text-[#64748B] font-semibold text-xs tracking-wider">
                   ACTIONS
                 </th>
               )}
@@ -123,7 +123,7 @@ export const DataTable = ({
           </thead>
 
           {/* Table Body */}
-          <tbody className="divide-y divide-slate-100">
+          <tbody className="divide-y divide-[#DCE5F0]">
             {isLoading ? (
               // Loading Skeleton
               Array.from({ length: pageSize || 5 }).map((_, rIdx) => (
@@ -151,11 +151,11 @@ export const DataTable = ({
                   className="py-16 text-center"
                 >
                   <div className="max-w-sm mx-auto flex flex-col items-center">
-                    <div className="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3">
+                    <div className="w-14 h-14 rounded-full bg-[#F5F8FC] border border-[#DCE5F0] flex items-center justify-center text-[#64748B] mb-3">
                       <Inbox className="w-7 h-7" />
                     </div>
-                    <h4 className="text-base font-semibold text-slate-800 font-serif">{emptyTitle}</h4>
-                    <p className="text-xs text-slate-500 mt-1 max-w-xs">{emptyDescription}</p>
+                    <h4 className="text-base font-semibold text-[#111827] font-serif">{emptyTitle}</h4>
+                    <p className="text-xs text-[#64748B] mt-1 max-w-xs">{emptyDescription}</p>
                   </div>
                 </td>
               </tr>
@@ -168,7 +168,7 @@ export const DataTable = ({
                 return (
                   <tr
                     key={rowKey}
-                    className="hover:bg-slate-50/70 transition-colors group"
+                    className="hover:bg-[#F5F8FC]/60 transition-colors group"
                   >
                     {columns.map((col) => {
                       const cellValue = col.accessor ? row[col.accessor] : null;
@@ -192,7 +192,7 @@ export const DataTable = ({
                               e.stopPropagation();
                               setOpenActionId(isMenuOpen ? null : rowKey);
                             }}
-                            className="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors border border-transparent hover:border-slate-200"
+                            className="p-1.5 text-[#64748B] hover:text-[#111827] hover:bg-[#F5F8FC] rounded-lg transition-colors border border-transparent hover:border-[#DCE5F0] cursor-pointer"
                             aria-label="Actions menu"
                           >
                             <MoreVertical className="w-4 h-4" />
@@ -209,8 +209,8 @@ export const DataTable = ({
                                 }} 
                               />
 
-                              {/* Three-dots Dropdown Menu matching BeautyOasis */}
-                              <div className="absolute right-0 mt-1 w-36 bg-white rounded-xl shadow-elevated border border-slate-200/90 py-1.5 z-40 text-xs animate-in fade-in zoom-in-95 duration-100 text-left">
+                              {/* Three-dots Dropdown Menu */}
+                              <div className="absolute right-0 mt-1 w-36 bg-white rounded-xl shadow-elevated border border-[#DCE5F0] py-1.5 z-40 text-xs animate-in fade-in zoom-in-95 duration-100 text-left">
                                 {onView && (
                                   <button
                                     type="button"
@@ -219,9 +219,9 @@ export const DataTable = ({
                                       setOpenActionId(null);
                                       onView(row);
                                     }}
-                                    className="w-full flex items-center gap-2.5 px-3 py-2 text-slate-700 hover:bg-slate-50 transition-colors font-medium text-left"
+                                    className="w-full flex items-center gap-2.5 px-3 py-2 text-[#111827] hover:bg-[#F5F8FC] transition-colors font-medium text-left cursor-pointer"
                                   >
-                                    <Eye className="w-4 h-4 text-slate-400 shrink-0" />
+                                    <Eye className="w-4 h-4 text-[#64748B] shrink-0" />
                                     <span>View Details</span>
                                   </button>
                                 )}
@@ -234,29 +234,26 @@ export const DataTable = ({
                                       setOpenActionId(null);
                                       onEdit(row);
                                     }}
-                                    className="w-full flex items-center gap-2.5 px-3 py-2 text-slate-700 hover:bg-slate-50 transition-colors font-medium text-left"
+                                    className="w-full flex items-center gap-2.5 px-3 py-2 text-[#111827] hover:bg-[#F5F8FC] transition-colors font-medium text-left cursor-pointer"
                                   >
-                                    <Edit3 className="w-4 h-4 text-slate-400 shrink-0" />
+                                    <Edit3 className="w-4 h-4 text-[#64748B] shrink-0" />
                                     <span>{editLabel}</span>
                                   </button>
                                 )}
 
                                 {onDelete && (
-                                  <>
-                                    <div className="border-t border-slate-100 my-1" />
-                                    <button
-                                      type="button"
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setOpenActionId(null);
-                                        onDelete(row);
-                                      }}
-                                      className="w-full flex items-center gap-2.5 px-3 py-2 text-rose-600 hover:bg-rose-50 transition-colors font-medium text-left"
-                                    >
-                                      <Trash2 className="w-4 h-4 text-rose-500 shrink-0" />
-                                      <span>Delete</span>
-                                    </button>
-                                  </>
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setOpenActionId(null);
+                                      onDelete(row);
+                                    }}
+                                    className="w-full flex items-center gap-2.5 px-3 py-2 text-rose-600 hover:bg-rose-50 transition-colors font-medium text-left cursor-pointer border-t border-[#DCE5F0]"
+                                  >
+                                    <Trash2 className="w-4 h-4 shrink-0" />
+                                    <span>Delete</span>
+                                  </button>
                                 )}
                               </div>
                             </>
@@ -266,21 +263,22 @@ export const DataTable = ({
                     )}
                   </tr>
                 );
-              })
-            )}
-          </tbody>
-        </table>
-      </div>
+              }))}
+            </tbody>
+          </table>
+        </div>
 
-      {/* Pagination Footer */}
-      <Pagination
-        page={page}
-        pageSize={pageSize}
-        totalPages={totalPages}
-        total={total}
-        onPageChange={onPageChange}
-        onPageSizeChange={onPageSizeChange}
-      />
+      {/* Pagination Container */}
+      {totalPages > 0 && onPageChange && (
+        <Pagination
+          page={page}
+          pageSize={pageSize}
+          total={total}
+          totalPages={totalPages}
+          onPageChange={onPageChange}
+          onPageSizeChange={onPageSizeChange}
+        />
+      )}
     </div>
   );
 };

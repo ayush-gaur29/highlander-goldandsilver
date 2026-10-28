@@ -40,22 +40,22 @@ export const Pagination = ({
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-4 py-3 bg-white border-t border-slate-200 text-sm text-slate-600 rounded-b-xl">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-4 py-3 bg-white border-t border-[#DCE5F0] text-sm text-[#64748B] rounded-b-2xl">
       {/* Items info and page size */}
       <div className="flex items-center gap-4 text-xs sm:text-sm">
         <span>
-          Showing <strong className="text-slate-900 font-semibold">{startItem}</strong> to{' '}
-          <strong className="text-slate-900 font-semibold">{endItem}</strong> of{' '}
-          <strong className="text-slate-900 font-semibold">{total}</strong> results
+          Showing <strong className="text-[#111827] font-semibold">{startItem}</strong> to{' '}
+          <strong className="text-[#111827] font-semibold">{endItem}</strong> of{' '}
+          <strong className="text-[#111827] font-semibold">{total}</strong> results
         </span>
 
         {onPageSizeChange && (
-          <div className="flex items-center gap-1.5 pl-2 border-l border-slate-200">
-            <span className="text-slate-500">Per page:</span>
+          <div className="flex items-center gap-1.5 pl-2 border-l border-[#DCE5F0]">
+            <span className="text-[#64748B]">Per page:</span>
             <select
               value={pageSize}
               onChange={(e) => onPageSizeChange(Number(e.target.value))}
-              className="bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded px-2 py-1 focus:ring-1 focus:ring-aubergine-muted focus:outline-none"
+              className="bg-[#F5F8FC] border border-[#DCE5F0] text-[#111827] text-xs rounded-lg px-2 py-1 focus:ring-1 focus:ring-[#D6AD45] focus:outline-none"
             >
               {pageSizeOptions.map((opt) => (
                 <option key={opt} value={opt}>
@@ -72,7 +72,7 @@ export const Pagination = ({
         <button
           onClick={() => onPageChange(1)}
           disabled={page <= 1}
-          className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="p-1.5 rounded-lg border border-[#DCE5F0] text-[#64748B] hover:bg-[#F5F8FC] hover:text-[#111827] disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
           title="First Page"
         >
           <ChevronsLeft className="w-4 h-4" />
@@ -80,7 +80,7 @@ export const Pagination = ({
         <button
           onClick={() => onPageChange(page - 1)}
           disabled={page <= 1}
-          className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="p-1.5 rounded-lg border border-[#DCE5F0] text-[#64748B] hover:bg-[#F5F8FC] hover:text-[#111827] disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
           title="Previous Page"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -91,10 +91,10 @@ export const Pagination = ({
             <button
               key={num}
               onClick={() => onPageChange(num)}
-              className={`min-w-[32px] h-8 px-2 text-xs font-medium rounded-lg transition-colors ${
+              className={`min-w-[32px] h-8 px-2 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
                 num === page
-                  ? 'bg-aubergine text-white font-semibold shadow-sm'
-                  : 'text-slate-600 hover:bg-slate-100'
+                  ? 'bg-[#111827] text-white font-semibold shadow-xs'
+                  : 'text-[#64748B] hover:bg-[#F5F8FC] hover:text-[#111827]'
               }`}
             >
               {num}
@@ -105,7 +105,7 @@ export const Pagination = ({
         <button
           onClick={() => onPageChange(page + 1)}
           disabled={page >= totalPages}
-          className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="p-1.5 rounded-lg border border-[#DCE5F0] text-[#64748B] hover:bg-[#F5F8FC] hover:text-[#111827] disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
           title="Next Page"
         >
           <ChevronRight className="w-4 h-4" />
@@ -113,7 +113,7 @@ export const Pagination = ({
         <button
           onClick={() => onPageChange(totalPages)}
           disabled={page >= totalPages}
-          className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="p-1.5 rounded-lg border border-[#DCE5F0] text-[#64748B] hover:bg-[#F5F8FC] hover:text-[#111827] disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
           title="Last Page"
         >
           <ChevronsRight className="w-4 h-4" />
@@ -122,4 +122,3 @@ export const Pagination = ({
     </div>
   );
 };
-

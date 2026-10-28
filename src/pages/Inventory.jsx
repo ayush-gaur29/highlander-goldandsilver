@@ -283,13 +283,13 @@ export const Inventory = () => {
 
   return (
     <div className="space-y-6">
-      {/* Page Header matching BeautyOasis reference & Highlander Storefront Theme */}
+      {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl sm:text-2xl font-bold font-serif text-[#0B2348] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold font-serif text-[#111827] tracking-tight">
             Product Catalog
           </h2>
-          <p className="text-xs sm:text-sm text-[#6F6C67] mt-0.5">
+          <p className="text-xs sm:text-sm text-[#64748B] mt-0.5">
             Manage collectible coins, precious metals, inventory, pricing, and storefront listings.
           </p>
         </div>
@@ -298,31 +298,31 @@ export const Inventory = () => {
         <div className="flex items-center gap-2.5">
           <button
             onClick={() => navigate('/categories')}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-[#E4E0D8] text-[#0B2348] text-xs font-semibold hover:bg-[#E8F0F8] transition-colors shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-[#DCE5F0] text-[#111827] text-xs font-semibold hover:bg-[#F5F8FC] transition-colors shadow-2xs cursor-pointer"
           >
-            <Layers className="w-3.5 h-3.5 text-[#C9A23A]" />
+            <Layers className="w-3.5 h-3.5 text-[#D6AD45]" />
             Manage Categories
           </button>
 
           <button
             onClick={exportCatalogCSV}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-[#E4E0D8] text-[#0B2348] text-xs font-semibold hover:bg-[#E8F0F8] transition-colors shadow-xs hidden md:inline-flex"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-[#DCE5F0] text-[#111827] text-xs font-semibold hover:bg-[#F5F8FC] transition-colors shadow-2xs hidden md:inline-flex cursor-pointer"
           >
-            <Download className="w-3.5 h-3.5 text-[#6F6C67]" />
+            <Download className="w-3.5 h-3.5 text-[#64748B]" />
             Export CSV
           </button>
 
           <button
             onClick={handleAddNew}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#C9A23A] hover:bg-[#B58D27] text-[#071A35] text-xs font-bold font-serif uppercase tracking-wider transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#D6AD45] hover:bg-[#BF952E] text-[#111827] text-xs font-bold font-serif uppercase tracking-wider transition-colors shadow-xs cursor-pointer"
           >
-            <Plus className="w-4 h-4 text-[#071A35]" />
+            <Plus className="w-4 h-4 text-[#111827]" />
             Add Catalog Item
           </button>
         </div>
       </div>
 
-      {/* Dynamic Data Table with Highlander Styling */}
+      {/* Dynamic Data Table */}
       <DataTable
         columns={columns}
         data={items}
@@ -354,7 +354,7 @@ export const Inventory = () => {
                 setCategory(e.target.value);
                 setPage(1);
               }}
-              className="bg-white border border-[#E4E0D8] text-[#0B2348] text-xs rounded-lg px-3 py-2 focus:ring-1 focus:ring-[#C9A23A] focus:border-[#C9A23A] focus:outline-none font-medium"
+              className="bg-white border border-[#DCE5F0] text-[#111827] text-xs rounded-xl px-3 py-2 focus:ring-1 focus:ring-[#D6AD45] focus:border-[#D6AD45] focus:outline-none font-medium cursor-pointer"
             >
               <option value="All">All Categories</option>
               {categories.map((c) => (
@@ -371,7 +371,7 @@ export const Inventory = () => {
                 setAvailability(e.target.value);
                 setPage(1);
               }}
-              className="bg-white border border-[#E4E0D8] text-[#0B2348] text-xs rounded-lg px-3 py-2 focus:ring-1 focus:ring-[#C9A23A] focus:border-[#C9A23A] focus:outline-none font-medium"
+              className="bg-white border border-[#DCE5F0] text-[#111827] text-xs rounded-xl px-3 py-2 focus:ring-1 focus:ring-[#D6AD45] focus:border-[#D6AD45] focus:outline-none font-medium cursor-pointer"
             >
               <option value="All">All Stock Status</option>
               <option value="Active">In Stock</option>
