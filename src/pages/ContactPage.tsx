@@ -1,67 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { BUSINESS_INFO } from '../data/businessInfo';
 import { Icons } from '../utils/icons';
 import { StorefrontNarrativeSection } from '../components/common/StorefrontNarrativeSection';
+import { CustomerInquiryForm } from '../components/contact/CustomerInquiryForm';
 
 export const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    topic: 'General Inquiry',
-    message: ''
-  });
-
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formError, setFormError] = useState('');
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (formError) setFormError('');
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.fullName.trim()) {
-      setFormError('Please enter your full name.');
-      return;
-    }
-    if (!formData.email.trim() || !formData.email.includes('@')) {
-      setFormError('Please enter a valid email address.');
-      return;
-    }
-    if (!formData.message.trim()) {
-      setFormError('Please enter your inquiry message.');
-      return;
-    }
-
-    setIsSubmitting(true);
-    setFormError('');
-
-    // Simulate clean dispatch with state confirmation
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-    }, 700);
-  };
-
-  const handleResetForm = () => {
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      topic: 'General Inquiry',
-      message: ''
-    });
-    setFormSubmitted(false);
-  };
-
   return (
     <main className="contact-page-main">
       {/* Page Header Banner with Right-Side Contact Cover Image */}
@@ -125,8 +69,8 @@ export const ContactPage: React.FC = () => {
       {/* Contact Hub: Interactive Form & Direct Storefront Channels */}
 
 
-      {/* About & Storefront Information Section — Refined 2-Column Layout */}
-      <StorefrontNarrativeSection />
+      {/* Contact Hub: Interactive Inquiry Form (Left) & Direct Storefront At A Glance (Right) */}
+      <StorefrontNarrativeSection leftContent={<CustomerInquiryForm />} />
     </main>
   );
 };
