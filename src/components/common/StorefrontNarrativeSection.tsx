@@ -5,60 +5,66 @@ import { Icons } from '../../utils/icons';
 interface StorefrontNarrativeSectionProps {
   className?: string;
   id?: string;
+  leftContent?: React.ReactNode;
 }
 
 export const StorefrontNarrativeSection: React.FC<StorefrontNarrativeSectionProps> = ({
   className = '',
-  id = 'storefront-model'
+  id = 'storefront-model',
+  leftContent
 }) => {
   return (
     <section className={`section section-warm storefront-narrative-section ${className}`} id={id}>
       <div className="container">
         <div className="storefront-narrative-grid">
-          {/* Left Column: Narrative & Philosophical Framework */}
-          <div className="storefront-narrative-content">
+          {/* Left Column: Customer Inquiry Form (when provided) or Default Brand Narrative */}
+          {leftContent ? (
+            <div className="storefront-left-custom-container">
+              {leftContent}
+            </div>
+          ) : (
+            <div className="storefront-narrative-content">
+              <h2 className="storefront-narrative-title">
+                A Transparent Model Built for Serious Collectors
+              </h2>
 
-
-            <h2 className="storefront-narrative-title">
-              A Transparent Model Built for Serious Collectors
-            </h2>
-
-            <p className="storefront-narrative-lead">
-              Highlander Gold &amp; Silver was established to solve the frustrations collectors encounter with traditional auction platforms: opaque buyer premiums, bidding frenzies, artificial reserves, and prolonged listing delays.
-            </p>
-
-            <div className="storefront-narrative-body-wrap">
-              <p className="storefront-narrative-body">
-                Operating from our physical location at Jewel Basin Armory in Bigfork, Montana, we offer an ongoing online and in-person storefront. When you find a sovereign gold trophy or certified Morgan dollar you desire, you can purchase it instantly at a guaranteed price with direct settlement.
+              <p className="storefront-narrative-lead">
+                Highlander Gold &amp; Silver was established to solve the frustrations collectors encounter with traditional auction platforms: opaque buyer premiums, bidding frenzies, artificial reserves, and prolonged listing delays.
               </p>
 
-              <p className="storefront-narrative-body">
-                Every single piece in our inventory is evaluated personally by our numismatic specialists for strike crispness, cartwheel luster, original surface integrity, and metal purity before being cataloged.
-              </p>
-            </div>
+              <div className="storefront-narrative-body-wrap">
+                <p className="storefront-narrative-body">
+                  Operating from our physical location at Jewel Basin Armory in Bigfork, Montana, we offer an ongoing online and in-person storefront. When you find a sovereign gold trophy or certified Morgan dollar you desire, you can purchase it instantly at a guaranteed price with direct settlement.
+                </p>
 
-            {/* Connecting Trust Anchors */}
-            <div className="storefront-trust-strip">
-              <div className="storefront-trust-item">
-                <div className="trust-check-icon">
-                  <Icons.Check size={14} strokeWidth={2.5} />
-                </div>
-                <span>Guaranteed Instant Price</span>
+                <p className="storefront-narrative-body">
+                  Every single piece in our inventory is evaluated personally by our numismatic specialists for strike crispness, cartwheel luster, original surface integrity, and metal purity before being cataloged.
+                </p>
               </div>
-              <div className="storefront-trust-item">
-                <div className="trust-check-icon">
-                  <Icons.Check size={14} strokeWidth={2.5} />
+
+              {/* Connecting Trust Anchors */}
+              <div className="storefront-trust-strip">
+                <div className="storefront-trust-item">
+                  <div className="trust-check-icon">
+                    <Icons.Check size={14} strokeWidth={2.5} />
+                  </div>
+                  <span>Guaranteed Instant Price</span>
                 </div>
-                <span>Expert In-House Vetting</span>
-              </div>
-              <div className="storefront-trust-item">
-                <div className="trust-check-icon">
-                  <Icons.Check size={14} strokeWidth={2.5} />
+                <div className="storefront-trust-item">
+                  <div className="trust-check-icon">
+                    <Icons.Check size={14} strokeWidth={2.5} />
+                  </div>
+                  <span>Expert In-House Vetting</span>
                 </div>
-                <span>Direct Flathead Consultation</span>
+                <div className="storefront-trust-item">
+                  <div className="trust-check-icon">
+                    <Icons.Check size={14} strokeWidth={2.5} />
+                  </div>
+                  <span>Direct Flathead Consultation</span>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Right Column: Redesigned "Storefront at a Glance" Card */}
           <div className="storefront-glance-card-container">
@@ -109,7 +115,7 @@ export const StorefrontNarrativeSection: React.FC<StorefrontNarrativeSectionProp
                   <div className="glance-item-info">
                     <span className="glance-item-label">Sales Tax</span>
                     <span className="glance-item-val">0% Montana State Sales Tax on All Metals</span>
-                    <span className="glance-item-note">Full statutory exemption across sovereign bullion &amp; rare coins</span>
+
                   </div>
                 </div>
 

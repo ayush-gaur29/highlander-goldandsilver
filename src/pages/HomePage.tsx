@@ -25,7 +25,7 @@ export const HomePage: React.FC = () => {
           />
 
           <div className="mobile-cta-center" style={{ marginTop: '2.5rem', textAlign: 'center' }}>
-            <Link to="/collection" className="btn btn-gold" style={{ display: 'inline-flex' }}>
+            <Link to="/collection" className="btn btn-gold btn-browse-collection" style={{ display: 'inline-flex' }}>
               <span>Browse All {INVENTORY_ITEMS.length} Certified Pieces</span>
               <Icons.ArrowRight size={16} />
             </Link>
@@ -96,20 +96,20 @@ export const HomePage: React.FC = () => {
                 <Icons.ShieldCheck size={16} strokeWidth={2.5} />
                 Authentic Value &amp; Authenticity Promise
               </span>
-              <h2 style={{ marginTop: '0.65rem', marginBottom: '1rem', color: 'var(--color-aubergine)' }}>
+              <h2 className="guarantee-title">
                 The Highlander Sold Value Guarantee
               </h2>
-              <p className="text-muted" style={{ marginBottom: '1rem', lineHeight: 1.65 }}>
+              <p className="text-muted guarantee-desc">
                 Highlander Gold &amp; Silver hand-selects coins and precious metals for superior eye appeal, strike quality,
                 and metal integrity. We represent sovereign gold, certified Morgan dollars, commemorative coins, and pure bullion.
               </p>
-              <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.65 }}>
+              <p className="text-muted guarantee-desc">
                 <strong>Our Direct Promise:</strong> If at any time a customer proves that a piece they purchased was
                 overpriced based on its current market state, HGS will refund the cost difference, or accept the return
                 of the item at its full purchased value (as-sold). Acquire with complete confidence knowing your investment
                 is backed by genuine integrity.
               </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+              <div className="guarantee-badges-list">
                 <span className="badge-verified">
                   <Icons.Check size={13} />
                   Verified Sold Value Guarantee

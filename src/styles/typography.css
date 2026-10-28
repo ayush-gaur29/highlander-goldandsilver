@@ -7,23 +7,25 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-aubergine);
   line-height: 1.15;
   letter-spacing: -0.015em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1 {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(1.85rem, 5vw, 3.8rem);
   font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
 }
 
 h4 {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
 }
 
 /* Gradient typography */
@@ -72,6 +74,23 @@ h4 {
   width: 14px;
   height: 2px;
   background-color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .eyebrow::before {
+    display: none;
+  }
 }
 
 /* Numismatic Monospace Elements */
