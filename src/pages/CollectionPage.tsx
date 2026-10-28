@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ItemCard } from '../components/collection/ItemCard';
 import { CategoryPills } from '../components/collection/CategoryPills';
 import { CollectionSearchBar } from '../components/collection/CollectionSearchBar';
 import { CollectionSortSelect } from '../components/collection/CollectionSortSelect';
-import { ItemModal } from '../components/common/ItemModal';
 import { useInventory } from '../hooks/useInventory';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { InventoryItem } from '../types';
 import { Icons } from '../utils/icons';
 
 export const CollectionPage: React.FC = () => {
@@ -25,19 +23,7 @@ export const CollectionPage: React.FC = () => {
     hasActiveFilters
   } = useInventory();
 
-  const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   useScrollReveal();
-
-  const handleInspectItem = (item: InventoryItem) => {
-    setSelectedItem(item);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <main className="collection-page-main">
@@ -163,11 +149,7 @@ export const CollectionPage: React.FC = () => {
           {filteredItems.length > 0 ? (
             <div className="item-grid" style={{ marginTop: '2rem' }}>
               {filteredItems.map((item) => (
-                <ItemCard
-                  key={item.id}
-                  item={item}
-                  onClick={handleInspectItem}
-                />
+                <ItemCard key={item.id} item={item} />
               ))}
             </div>
           ) : (
@@ -207,13 +189,6 @@ export const CollectionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Item Detail Modal */}
-      <ItemModal
-        item={selectedItem}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </main>
   );
 };

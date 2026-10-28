@@ -1,31 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { HeroSection } from './Home/HeroSection';
-import { ItemCard } from '../components/collection/ItemCard';
 import { FeaturedCarousel } from '../components/collection/FeaturedCarousel';
-import { ItemModal } from '../components/common/ItemModal';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { INVENTORY_ITEMS } from '../data/inventory';
 import { BUSINESS_INFO } from '../data/businessInfo';
 import { Icons } from '../utils/icons';
-import { InventoryItem } from '../types';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const HomePage: React.FC = () => {
-  const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   // Setup smooth scroll reveal observer
   useScrollReveal();
-
-  const handleInspectItem = (item: InventoryItem) => {
-    setSelectedItem(item);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <main>
@@ -37,7 +22,6 @@ export const HomePage: React.FC = () => {
         <div className="container">
           <FeaturedCarousel
             items={INVENTORY_ITEMS}
-            onInspectItem={handleInspectItem}
           />
 
           <div className="mobile-cta-center" style={{ marginTop: '2.5rem', textAlign: 'center' }}>
@@ -153,10 +137,7 @@ export const HomePage: React.FC = () => {
         <div className="container">
           <div className="heritage-preview-card reveal-on-scroll is-revealed">
             <div className="heritage-preview-content">
-              <span className="eyebrow-badge">
-                <Icons.MapPin size={12} />
-                Jewel Basin Armory · Bigfork, Montana
-              </span>
+
               <h2 className="heritage-preview-title">
                 Rooted in Flathead Valley Numismatic Tradition
               </h2>
@@ -176,13 +157,6 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Item Detail Modal */}
-      <ItemModal
-        item={selectedItem}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </main>
   );
 };

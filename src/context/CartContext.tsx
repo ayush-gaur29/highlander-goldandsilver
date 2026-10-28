@@ -5,7 +5,7 @@ import { calculateSettlement, generatePayPalPaymentUrl } from '../utils/payment'
 
 interface CartContextType {
   cartItems: CartItem[];
-  addToCart: (item: InventoryItem) => void;
+  addToCart: (item: InventoryItem, quantity?: number) => void;
   removeFromCart: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;
@@ -40,17 +40,18 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }
   }, [cartItems]);
 
-  const addToCart = (item: InventoryItem) => {
+  const addToCart = (item: InventoryItem, quantity: number = 1) => {
     if (item.status === 'Unavailable') return;
+    const qtyToAdd = Math.max(1, quantity);
 
     setCartItems((prev) => {
       const existing = prev.find((ci) => ci.item.id === item.id);
       if (existing) {
         return prev.map((ci) =>
-          ci.item.id === item.id ? { ...ci, quantity: ci.quantity + 1 } : ci
+          ci.item.id === item.id ? { ...ci, quantity: ci.quantity + qtyToAdd } : ci
         );
       }
-      return [...prev, { item, quantity: 1 }];
+      return [...prev, { item, quantity: qtyToAdd }];
     });
 
     setIsCartOpen(true);

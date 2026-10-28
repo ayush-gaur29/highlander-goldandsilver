@@ -5,7 +5,7 @@ import { Icons } from '../../utils/icons';
 
 interface FeaturedCarouselProps {
   items: InventoryItem[];
-  onInspectItem: (item: InventoryItem) => void;
+  onInspectItem?: (item: InventoryItem) => void;
 }
 
 export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({

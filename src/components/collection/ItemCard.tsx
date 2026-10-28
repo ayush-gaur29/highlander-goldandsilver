@@ -1,28 +1,31 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { InventoryItem } from '../../types';
 import { Icons } from '../../utils/icons';
-import { useCart } from '../../context/CartContext';
+import { getProductPath } from '../../utils/slug';
 
 export interface ItemCardProps {
   item: InventoryItem;
-  onClick: (item: InventoryItem) => void;
+  onClick?: (item: InventoryItem) => void;
 }
 
 export const ItemCard: React.FC<ItemCardProps> = ({ item, onClick }) => {
-  const { addToCart } = useCart();
+  const navigate = useNavigate();
   const isUnavailable = item.status === 'Unavailable';
+  const productPath = getProductPath(item);
+
+  const handleCardClick = () => {
+    if (onClick) {
+      onClick(item);
+    } else {
+      navigate(productPath);
+    }
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      onClick(item);
-    }
-  };
-
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (!isUnavailable) {
-      addToCart(item);
+      handleCardClick();
     }
   };
 
@@ -31,8 +34,9 @@ export const ItemCard: React.FC<ItemCardProps> = ({ item, onClick }) => {
       className={`item-card ${isUnavailable ? 'item-card-unavailable' : ''}`}
       data-id={item.id}
       tabIndex={0}
-      aria-label={`Item ${item.lotNumber}: ${item.title}`}
-      onClick={() => onClick(item)}
+      role="link"
+      aria-label={`View details for ${item.title}`}
+      onClick={handleCardClick}
       onKeyDown={handleKeyDown}
     >
       {/* Media Box with Item Badge & Subtle Warm Neutral / Silver Background */}
@@ -81,7 +85,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({ item, onClick }) => {
           {item.lead || item.description}
         </p>
 
-        {/* Footer: Price & Storefront Actions */}
+        {/* Footer: Price & View Details Action */}
         <div className="card-footer">
           <div className="card-price-box">
             <span className="price-label">Storefront Price</span>
@@ -92,44 +96,14 @@ export const ItemCard: React.FC<ItemCardProps> = ({ item, onClick }) => {
           </div>
 
           <div className="card-actions-group">
-            {!isUnavailable ? (
-              <button
-                type="button"
-                className="btn-card-add-cart"
-                aria-label={`Add ${item.title} to cart`}
-                onClick={handleAddToCart}
-                title="Add to shopping cart"
-              >
-                <Icons.ShoppingBag size={14} />
-                <span>Add to Cart</span>
-              </button>
-            ) : (
-              <button
-                type="button"
-                className="btn-card-unavailable"
-                disabled
-                aria-label={`${item.title} is currently unavailable`}
-              >
-                <span>Unavailable</span>
-              </button>
-            )}
-
-            <button
-              type="button"
-              className="card-inspect-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClick(item);
-              }}
-              aria-label={`Quick view of ${item.title}`}
-              title="Inspect coin details"
-            >
-              <span>Inspect</span>
+            <span className="card-inspect-btn" aria-hidden="true">
+              <span>View Piece</span>
               <Icons.ArrowRight size={13} />
-            </button>
+            </span>
           </div>
         </div>
       </div>
     </article>
   );
 };
+
